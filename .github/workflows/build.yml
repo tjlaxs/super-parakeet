@@ -16,7 +16,7 @@ jobs:
           lfs: true
       - name: Build
         id: build
-        uses: tjlaxs/build-godot-action@f362e14dc5d8290ac81ee3ed7c799242dd3215af
+        uses: tjlaxs/build-godot-action@master
         with:
           name: example
           preset: ${{ matrix.platform }}
