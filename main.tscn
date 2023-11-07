@@ -9,7 +9,36 @@ script = ExtResource("1_3ofcx")
 
 [node name="TextEdit" type="TextEdit" parent="."]
 layout_mode = 0
-offset_left = 12.0
+offset_left = 186.0
 offset_top = 17.0
 offset_right = 1137.0
 offset_bottom = 631.0
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 18.0
+offset_right = 174.0
+offset_bottom = 264.0
+theme_override_constants/separation = 10
+
+[node name="ChangedFiles" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Changed Files"
+
+[node name="AddAll" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Add ."
+
+[node name="Commit" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Commit"
+
+[node name="Push" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Push"
+
+[connection signal="pressed" from="Buttons/ChangedFiles" to="." method="_on_changed_files_pressed"]
+[connection signal="pressed" from="Buttons/AddAll" to="." method="_on_add_all_pressed"]
+[connection signal="pressed" from="Buttons/Commit" to="." method="_on_commit_pressed"]
+[connection signal="pressed" from="Buttons/Push" to="." method="_on_push_pressed"]
