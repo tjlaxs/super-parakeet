@@ -40,5 +40,21 @@ func diff_name_only() -> String:
 	])
 
 # Get patch for file
-func diff(s: String):
-	return run(["diff", s])
+func diff(s: String) -> String:
+	return run([
+		"diff",
+		s
+	])
+
+func add_all() -> String:
+	return run([
+		"add",
+		"."
+	])
+
+func remove_all() -> String:
+	return run([
+		"restore",
+		"--staged",
+		"."
+	])

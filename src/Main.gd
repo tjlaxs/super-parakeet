@@ -24,11 +24,17 @@ func _ready():
 
 # React to clicks
 
+func _on_status_pressed():
+	status.text = git.status()
+
 func _on_changed_files_pressed():
 	status.text = git.status_porcelain()
 
 func _on_add_all_pressed():
-	status.text = git.status()
+	status.text = git.add_all()
+
+func _on_remove_all_pressed():
+	status.text = git.remove_all()
 
 func _on_commit_pressed():
 	status.text = git.status()

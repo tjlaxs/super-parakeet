@@ -22,13 +22,21 @@ offset_right = 174.0
 offset_bottom = 264.0
 theme_override_constants/separation = 10
 
+[node name="Status" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Status"
+
 [node name="ChangedFiles" type="Button" parent="Buttons"]
 layout_mode = 2
 text = "Changed Files"
 
 [node name="AddAll" type="Button" parent="Buttons"]
 layout_mode = 2
-text = "Add ."
+text = "Add all"
+
+[node name="RemoveAll" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Remove all"
 
 [node name="Commit" type="Button" parent="Buttons"]
 layout_mode = 2
@@ -38,7 +46,9 @@ text = "Commit"
 layout_mode = 2
 text = "Push"
 
+[connection signal="pressed" from="Buttons/Status" to="." method="_on_status_pressed"]
 [connection signal="pressed" from="Buttons/ChangedFiles" to="." method="_on_changed_files_pressed"]
 [connection signal="pressed" from="Buttons/AddAll" to="." method="_on_add_all_pressed"]
+[connection signal="pressed" from="Buttons/RemoveAll" to="." method="_on_remove_all_pressed"]
 [connection signal="pressed" from="Buttons/Commit" to="." method="_on_commit_pressed"]
 [connection signal="pressed" from="Buttons/Push" to="." method="_on_push_pressed"]
