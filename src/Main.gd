@@ -10,7 +10,6 @@ func _ready():
 	
 	# TODO:
 	#  - basic git flow
-	#    - git status
 	#    - git add .
 	#    - git commit -m "plop"
 	#    - git push
