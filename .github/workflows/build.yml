@@ -18,7 +18,7 @@ jobs:
         id: build
         uses: tjlaxs/build-godot-action@master
         with:
-          name: example
+          name: ${{ matrix.platform == 'mac' && 'example.zip' || 'example' }}
           preset: ${{ matrix.platform }}
           debugMode: "true"
       - name: List files
