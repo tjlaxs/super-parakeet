@@ -18,9 +18,9 @@ jobs:
         id: build
         uses: tjlaxs/build-godot-action@master
         with:
-          name: ${{ matrix.platform == 'mac' && 'example.zip' || 'example' }}
+          name: ${{ matrix.platform == 'mac' && 'super-parakeet.zip' || 'super-parakeet' }}
           preset: ${{ matrix.platform }}
-          debugMode: "true"
+          debugMode: "false"
       - name: List files
         run: |
           tree .
